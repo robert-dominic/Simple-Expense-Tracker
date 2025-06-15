@@ -26,16 +26,17 @@ h1 {
 
 /* Form styles */
 form {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 2rem;
-  position: relative;
 }
 
 .form-group {
+  flex: 1 1 45%;
   display: flex;
   flex-direction: column;
+  min-width: 120px;
 }
 
 label {
@@ -54,9 +55,9 @@ select {
 }
 
 .button-container {
-  grid-column: span 4; /* Span across the full form width */
   display: flex;
-  justify-content: flex-end; /* 👈 Align button to the right */
+  justify-content: flex-end;
+  width: 100%;
 }
 
 button#add-expense {
@@ -113,4 +114,9 @@ tfoot td {
   background-color: #c0392b;
 }
 
-
+/* Responsive tweak for small screens */
+@media (max-width: 480px) {
+  .form-group {
+    flex: 1 1 100%;
+  }
+}

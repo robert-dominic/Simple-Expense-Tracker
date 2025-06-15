@@ -73,7 +73,7 @@ function renderExpenses() {
       <td>${exp.date}</td>
       <td>${exp.category}</td>
       <td>${exp.description}</td>
-      <td>${formatUSD(exp.amount)}</td>
+      <td>${formatNaira(exp.amount)}</td>
     `;
     // Append this row to the table body
     expenseTableBody.appendChild(row);
@@ -82,7 +82,7 @@ function renderExpenses() {
   });
 
   // Update the total amount display
-  totalAmountEl.textContent = formatUSD(total);
+  totalAmountEl.textContent = formatNaira(total);
 }
 
 const resetBtn = document.getElementById('reset-tracker');
