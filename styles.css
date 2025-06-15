@@ -95,3 +95,22 @@ tbody td, tfoot td {
 tfoot td {
   font-weight: bold;
 }
+
+.reset-btn {
+  margin-top: 1.5rem;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-btn:hover {
+  background-color: #c0392b;
+}
+
+

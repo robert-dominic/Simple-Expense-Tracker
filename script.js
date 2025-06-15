@@ -84,3 +84,13 @@ function renderExpenses() {
   // Update the total amount display
   totalAmountEl.textContent = formatUSD(total);
 }
+
+const resetBtn = document.getElementById('reset-tracker');
+
+resetBtn.addEventListener('click', () => {
+  if (confirm('Are you sure you want to reset your tracker? This will remove all data.')) {
+    localStorage.removeItem('expenses');
+    expenses = [];
+    renderExpenses(); // This will re-render the table as empty
+  }
+});
